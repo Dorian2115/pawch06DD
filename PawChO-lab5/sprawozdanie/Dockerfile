@@ -7,7 +7,7 @@ WORKDIR /app
 RUN mkdir -p -m 0600 ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts
 
 # Pobranie kodu przez SSH
-RUN --mount=type=ssh git clone git@github.com/Dorian2115/pawch06DD.git .
+RUN --mount=type=ssh git clone git@github.com:Dorian2115/pawch06DD.git .
 
 ARG VERSION=1.0
 RUN echo "<!DOCTYPE html><html><head><title>Aplikacja Lab 5 i 6</title><meta charset='utf-8'></head><body>" > index.html && \
